@@ -1,13 +1,15 @@
 //DO NOT FORGET TO SET UP YOUR PROCFILE COREECTLY
-
+// heroku pg:psql postgresql-deep-22332 --app cv-portfilo
 // Use the environment variable or use a given port
 const PORT = process.env.PORT || 8080;
 
 // Create a server, uses `handleRequest` which is function that takes
 // care of providing requested data
 //const server = http.createServer(handleRequest);
-var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
-
+// var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+// console.log(process.env.DATABASE_URL)
+// var connectionString = process.env.DATABASE_URL
+var connectionString =  'postgres://rqyuuegdamtgnm:c18a72bfca04876804550396dc037c0933e8d5abd53aa67af572497c34718e72@ec2-54-243-235-153.compute-1.amazonaws.com:5432/dbadqlplncc2qi'
 
 var express = require('express')
 var server = express()
@@ -15,7 +17,7 @@ var parser = require('body-parser')
 var ejs = require('ejs')
 const { Client } = require('pg')
 
-
+console.log(connectionString)
 server.set('view engine', 'ejs')
 
 server.use(express.static('css'));
@@ -31,7 +33,8 @@ server.get('/', (req, res) => {
 server.get('/blog', (req, res) => {
 
   const client = new Client({
-    connectionString: connectionString
+    connectionString: connectionString,
+    ssl:true
   })
   client.connect()
     .then(() => {
@@ -49,8 +52,9 @@ server.get('/blog', (req, res) => {
 server.post('/add', (req, res) => {
   let data = req.body;
   const client = new Client({
-    connectionString: connectionString
-  })
+    connectionString: connectionString,
+    // ssl:true
+    })
   client.connect()
     .then(() => {
 
