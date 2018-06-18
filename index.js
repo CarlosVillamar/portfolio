@@ -1,27 +1,68 @@
 //DO NOT FORGET TO SET UP YOUR PROCFILE COREECTLY
 
 // Use the environment variable or use a given port
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 // Create a server, uses `handleRequest` which is function that takes
 // care of providing requested data
 //const server = http.createServer(handleRequest);
+var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+
 
 var express = require('express')
 var server = express()
-var ejs = require('ejs');
 var parser = require('body-parser')
-const {client}= require('pg')
+var ejs = require('ejs')
+const { Client } = require('pg')
 
 
-server.use(express.json)
-server.use(parser.urlencoded({extended: true}))
-server.set('views engine','ejs')
+server.set('view engine', 'ejs')
 
-server.get('/', (req,res)=>{
+server.use(express.static('css'));
+server.use(express.json())
+server.use(parser.urlencoded({ extended: true }))
+
+server.get('/', (req, res) => {
   // res.send("hello its me")
   res.render('portfolio')
 })
+
+
+server.post('/add', (req, res) => {
+  let data = req.body;
+  const client = new Client({
+    connectionString: connectionString
+  })
+  client.connect()
+    .then(() => {
+
+      console.log('inserted a message.');
+      return client.query(`INSERT INTO blogs (title, body) VALUES ($1, $2)`, [data.title, data.subject])
+
+    })
+  // res.redirect('msgboard')
+})
+
+server.get('/blog', (req, res) => {
+
+  const client = new Client({
+    connectionString: connectionString
+  })
+  client.connect()
+    .then(() => {
+      return client.query(`SELECT * FROM BLOGS ORDER BY ID ASC`)
+    })
+    .then((result) => {
+      // render index page
+
+      return res.render('blog', {
+        result
+      })
+    })
+})
+
+
+
 
 // Start the server
 server.listen(PORT, () => {
