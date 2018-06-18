@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 // Create a server, uses `handleRequest` which is function that takes
 // care of providing requested data
 //const server = http.createServer(handleRequest);
-var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
+var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blogs';
 
 
 var express = require('express')
@@ -28,21 +28,6 @@ server.get('/', (req, res) => {
 })
 
 
-server.post('/add', (req, res) => {
-  let data = req.body;
-  const client = new Client({
-    connectionString: connectionString
-  })
-  client.connect()
-    .then(() => {
-
-      console.log('inserted a message.');
-      return client.query(`INSERT INTO blogs (title, body) VALUES ($1, $2)`, [data.title, data.subject])
-
-    })
-  // res.redirect('msgboard')
-})
-
 server.get('/blog', (req, res) => {
 
   const client = new Client({
@@ -59,6 +44,20 @@ server.get('/blog', (req, res) => {
         result
       })
     })
+})
+server.post('/add', (req, res) => {
+  let data = req.body;
+  const client = new Client({
+    connectionString: connectionString
+  })
+  client.connect()
+    .then(() => {
+
+      console.log('inserted a message.');
+      return client.query(`INSERT INTO blogs (title, body) VALUES ($1, $2)`, [data.title, data.subject])
+
+    })
+  res.redirect('blog')
 })
 
 
