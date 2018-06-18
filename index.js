@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 // Create a server, uses `handleRequest` which is function that takes
 // care of providing requested data
 //const server = http.createServer(handleRequest);
-var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blogs';
+var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
 
 
 var express = require('express')
@@ -35,7 +35,7 @@ server.get('/blog', (req, res) => {
   })
   client.connect()
     .then(() => {
-      return client.query(`SELECT * FROM BLOGS ORDER BY ID ASC`)
+      return client.query(`SELECT * FROM blogs ORDER BY ID ASC`)
     })
     .then((result) => {
       // render index page
@@ -45,6 +45,7 @@ server.get('/blog', (req, res) => {
       })
     })
 })
+
 server.post('/add', (req, res) => {
   let data = req.body;
   const client = new Client({
@@ -57,7 +58,7 @@ server.post('/add', (req, res) => {
       return client.query(`INSERT INTO blogs (title, body) VALUES ($1, $2)`, [data.title, data.subject])
 
     })
-  res.redirect('blog')
+  res.redirect('/blog')
 })
 
 
