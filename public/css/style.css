@@ -10,6 +10,12 @@ h1{
   height: 100%;
   justify-content: space-around;
 }
+.pic2{
+  margin-left: 25%;
+  width: 50%;
+  height: 80%;
+  justify-content: space-around;
+}
 .ls{
   text-align: center;
   padding-right: 30%;

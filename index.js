@@ -65,7 +65,9 @@ server.post('/add', (req, res) => {
     })
   res.redirect('/blog')
 })
-
+ server.get("/dog",(req,res)=>{
+   res.render('doggy')
+ })
 
 
 
