@@ -9,18 +9,19 @@ const PORT = process.env.PORT || 8080;
 // var connectionString = 'postgres://postgres' + ':' + process.env.POSTGRES_PASSWORD + '@localhost/blog';
 // console.log(process.env.DATABASE_URL)
 // var connectionString = process.env.DATABASE_URL
-var connectionString =  'postgres://rqyuuegdamtgnm:c18a72bfca04876804550396dc037c0933e8d5abd53aa67af572497c34718e72@ec2-54-243-235-153.compute-1.amazonaws.com:5432/dbadqlplncc2qi'
-
+var connectionString = 'postgres://rqyuuegdamtgnm:c18a72bfca04876804550396dc037c0933e8d5abd53aa67af572497c34718e72@ec2-54-243-235-153.compute-1.amazonaws.com:5432/dbadqlplncc2qi'
 var express = require('express')
 var server = express()
 var parser = require('body-parser')
 var ejs = require('ejs')
 const { Client } = require('pg')
 
-console.log(connectionString)
+// console.log(connectionString)
 server.set('view engine', 'ejs')
 
-server.use(express.static('css'));
+// server.use(express.static('css'));
+// server.use(express.static('images'));
+server.use(express.static('public'))
 server.use(express.json())
 server.use(parser.urlencoded({ extended: true }))
 
@@ -34,7 +35,7 @@ server.get('/blog', (req, res) => {
 
   const client = new Client({
     connectionString: connectionString,
-    ssl:true
+    ssl: true
   })
   client.connect()
     .then(() => {
@@ -54,7 +55,7 @@ server.post('/add', (req, res) => {
   const client = new Client({
     connectionString: connectionString,
     // ssl:true
-    })
+  })
   client.connect()
     .then(() => {
 

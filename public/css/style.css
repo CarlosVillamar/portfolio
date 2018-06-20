@@ -1,0 +1,242 @@
+
+h1{
+  font-size: 40pt;
+  font-family: monospace;
+  text-align: center;
+  color: aqua;
+}
+.pic{
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+.ls{
+  text-align: center;
+  padding-right: 30%;
+}
+.text{
+  text-align: justify;
+  font-size: 15pt;
+  color: aquamarine;
+  letter-spacing: 2px;
+  background-color: rgba(3, 3, 83, 0.829)
+}
+
+body{
+  width: 1080px;
+  padding: .5%;
+  margin: auto;
+}
+.gallery{
+  margin:5px;
+  border: 5px solid aqua;
+  float: left;
+  width: 250px;
+}
+.gallery:hover{
+  border: 5px solid #404040;
+
+  
+}
+.desc{
+  padding: 10px;
+  text-align: center;
+  background-color: white; 
+  color: aqua;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 80px;
+}
+.desc:hover{
+  color: purple;
+  text-decoration: underline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: static;
+    top: 2px;
+
+}
+.list{
+    float:grid-auto-flow;
+    }
+.list a{
+    display: block;
+    color: white;
+    float: left;
+    padding: 10px;
+    border: groove 2px;
+    border-color: aqua;
+    text-align: center;
+    text-decoration: none;
+}
+
+.list a:hover {
+    background-color: palegreen;
+    border-color: black;
+    color: black;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+  height: 70%;
+  padding: 5px;
+  border: aqua solid 3px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 1; 
+  cursor: pointer;  
+}
+thead th:nth-child(1) {
+  width: 30%; }
+
+thead th:nth-child(2) {
+  width: 50%; }
+
+
+.column img:hover {
+  opacity: 0.5;
+}
+table {
+  table-layout: fixed;
+  display: table;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%; }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: absolute;
+  display: none;
+  width: 50%;
+  height: 50%;
+  float: right;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: aqua;
+  font-size: 100px;
+  cursor: pointer;
+  
+}
+
+/* table row styling */
+td {
+  padding: 5px; }
+
+/* table header styling */
+th {
+  color:aqua;
+  padding-left: 12px;
+  text-align: left; }
+
+td {
+  border-bottom: none;
+  color: rgb(12, 209, 144);
+  padding-left: 12px;
+  white-space: word-wrap; }
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+      width: 100%;
+  }
+}

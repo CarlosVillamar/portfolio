@@ -1,7 +1,7 @@
 <!DOCTYPE HTML5>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <ul class="list">
         <li>
             <!--remember -->
@@ -18,15 +18,13 @@
     </ul>
 </head>
 
-<body id = "con2">
-    
+<body style="background-image: url(images/wallpaper2.jpg)">
+
     <div style="padding-left: 20px">
-            <br>
         <form id="form" style=" left: 40%;
-            top: 5%;
-            position: absolute;
-            bottom: 15%; color: white;
-            " action="/add" method="POST">
+            top: 10%; 
+            position: absolute; padding: 1%"
+            class="text" action="/add" method="POST">
             <h4>Join us share a topic</h4>
             subject:
             <br>
@@ -39,33 +37,45 @@
             <button type="submit" id="button" style="display: block">Submit</button>
         </form>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>Bulletin Board</h1>
-    <table style="padding: 5px; color: white">
-        <thead>
-            <tr>
-                <th>Subject</th>
-                <th>Message</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% for (let i in result.rows) { %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="padding: 10px; background-color: rgba(3, 3, 53, 0.87); height: 50%;" >
+        <h1>Bulletin Board</h1>
+        <table style="padding: 5px; color: white">
+            <thead>
                 <tr>
-                    <!-- <td id='id'>
-                      <%= result.rows[i].id %> -->
-                    </td>
-                    <td name='title' value='' style="text-align: justify">
-                        <%= result.rows[i].title %>
-                    </td>
-                    <td name='body' value='' style="text-align: justify">
-                        <%= result.rows[i].body %>
-                    </td>
-
+                    <th>Subject</th>
+                    <th>Message</th>
                 </tr>
-                <% } %>
-        </tbody>
+            </thead>
+            <tbody>
+                <% for (let i in result.rows) { %>
+                    <tr>
+                        <!-- <td id='id'>
+                      <%= result.rows[i].id %> -->
+                        </td>
+                        <td name='title' value='' style="text-align: justify">
+                            <%= result.rows[i].title %>
+                        </td>
+                        <td name='body' value='' style="text-align: justify">
+                            <%= result.rows[i].body %>
+                        </td>
 
-    </table>
+                    </tr>
+                    <% } %>
+            </tbody>
 
+        </table>
 
+    </div>
 </body>
