@@ -119,6 +119,7 @@ table {
   clear: both;
 }
 
+
 /* The expanding image container (positioning is needed to position the close button and the text) */
 .container {
   position: absolute;
@@ -149,9 +150,6 @@ table {
 }
 
 /* table row styling */
-td {
-  padding: 5px; }
-
 /* table header styling */
 th {
   color:aqua;
@@ -162,7 +160,11 @@ td {
   border-bottom: none;
   color: rgb(12, 209, 144);
   padding-left: 12px;
-  white-space: word-wrap; }
+  white-space: word-wrap; 
+  border: aqua solid 3px;
+  text-align: justify;
+  padding: 5px; 
+}
   /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
