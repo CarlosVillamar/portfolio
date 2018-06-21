@@ -65,9 +65,18 @@ server.post('/add', (req, res) => {
     })
   res.redirect('/blog')
 })
- server.get("/dog",(req,res)=>{
-   res.render('doggy')
- })
+
+
+
+server.get("/dog", (req, res) => {
+  res.render('doggy')
+})
+server.get('/movies',(req,res)=>{
+  res.render('movies')
+})
+server.get('/napster',(req,res)=>{
+  res.render('napster')
+})
 
 
 

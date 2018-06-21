@@ -1,0 +1,76 @@
+<!DOCTYPE HTML5>
+
+<head>
+
+    <title>Carlos' Napster Jukebox</title>
+
+    <link rel="stylesheet" href="css/napsterStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    
+</head>
+<ul class="list2" id="ul">
+        <li>
+            <a href="/">Carlos' Portfolio</a>
+        </li>
+        <li>
+            <a href="/blog">Blog</a>
+        </li>
+
+        <li>
+            <a href="/dog">YO DAWG!!</a>
+        </li>
+        <li>
+            <a href="/movies">What movie was that?</a>
+        </li>
+        <li>
+            <a href="/napster">Napster???</a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/carlosvillamar/">Contact</a>
+        </li>
+    </ul>
+<body>
+    <div id="box">
+        <div id="dial">
+            <ul class="playlist">
+                <form id="form">
+                    <input id="search" name="search" placeholder="search your favorite artists' top five!!" style="width: 250; text-align: center">
+                </form>
+
+                <div id=yo></div>
+            </ul>
+            <div id="menu-outer">
+                <div id="controls">
+
+                    <div id="center">
+                        <button class="back_controls">
+                            <i class="far fa-caret-square-left" style="background-color: aqua; color: black;  "></i>
+                        </button>
+                        <button id="play">
+                            <i class="far fa-play-circle" style="background-color: aqua; color: black; "></i>
+                        </button>
+                        <button id="pause">
+                            <i class="far fa-pause-circle" style="background-color: aqua; color: black;"></i>
+                        </button>
+                        <button id="stop">
+                            <i class="far fa-stop-circle" style="background-color: aqua; color: black;  "></i>
+                        </button>
+                        <button class="next_controls">
+                            <i class="far fa-caret-square-right" style="background-color: aqua; color: black; "></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <audio id="audio">
+                </audio>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="blurb"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="js/naps.js"></script>
+</body>

@@ -9,12 +9,17 @@
         <li>
             <a href="/blog">Blog</a>
         </li>
-
-        <li>
-            <a href="https://www.linkedin.com/in/carlosvillamar/">Contact</a>
-        </li>
         <li>
             <a href="/dog">YO DAWG!!</a>
+        </li>
+        <li>
+            <a href="/movies">What movie was that?</a>
+        </li>
+        <li>
+            <a href="/napster">Napster???</a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/carlosvillamar/">Contact</a>
         </li>
 
     </ul>
@@ -24,7 +29,7 @@
 
     <div style="padding-left: 20px">
         <form id="form" style=" left: 40%;
-            top: 10.5%; 
+            top: 12%; 
             position: absolute; padding: 1%" class="text" action="/add" method="POST">
             <h4>Join us share a topic</h4>
             subject:
@@ -61,9 +66,14 @@
                       <%= result.rows[i].id %> -->
 
                         <td name='title' value='' style=>
-                          <span style="padding-bottom: 5px; border-bottom:solid aqua 2px; background-origin: padding-box;"><b><%= result.rows[i].title %></b></span>
-                            <br><br>
-                        <%= result.rows[i].body %>
+                            <span style="padding-bottom: 5px; border-bottom:solid aqua 2px; background-origin: padding-box;">
+                                <b>
+                                    <%= result.rows[i].title %>
+                                </b>
+                            </span>
+                            <br>
+                            <br>
+                            <%= result.rows[i].body %>
                         </td>
                         <!-- <tr name='body' value='' style="text-align: justify">
                             <%= result.rows[i].body %>

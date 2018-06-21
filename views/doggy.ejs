@@ -4,15 +4,16 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+
         $.ajax({
             type: "GET",
             url: "https://dog.ceo/api/breeds/image/random/3",
             success: (d) => {
                 console.log(d.message[0])
-                $("body").css('background-image','url('+d.message[1]+')')
-                $("p").append("<br><img class='pic2'  src="+d.message[0]+"></img><br>")
-                $("p").append("<br><img class='pic2'  src="+d.message[1]+"></img><br>")
-                $("p").append("<br><img class='pic2'  src="+d.message[2]+"></img><br><br>")
+                $("body").css('background-image', 'url(' + d.message[1] + ')')
+                $("p").append("<br><img class='pic2'  src=" + d.message[0] + "></img><br>")
+                $("p").append("<br><img class='pic2'  src=" + d.message[1] + "></img><br>")
+                $("p").append("<br><img class='pic2'  src=" + d.message[2] + "></img><br><br>")
             }
 
         })
@@ -30,20 +31,26 @@
         </li>
 
         <li>
-            <a href="https://www.linkedin.com/in/carlosvillamar/">Contact</a>
-        </li>
-        <li>
             <a href="/dog">YO DAWG!!</a>
         </li>
+        <li>
+            <a href="/movies">What movie was that?</a>
+        </li>
+        <li>
+            <a href="/napster">Napster???</a>
+        </li>
 
+        <li>
+            <a href="https://www.linkedin.com/in/carlosvillamar/">Contact</a>
+        </li>
     </ul>
 
 </head>
 
 <body>
-    <p class="text">This is an example to demonstrate an ajax calls to an api. Below you will see 3 photos of dogs that will generate at random eveytime you refresh this page,
-        thanks in part to the DOG  API.
-    <br>
+    <p class="text">This is an example to demonstrate an ajax calls to an api. Below you will see 3 photos of dogs that will generate at
+        random eveytime you refresh this page, thanks in part to the DOG API.
+        <br>
 
     </p>
 

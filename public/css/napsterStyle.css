@@ -1,0 +1,93 @@
+.playlist{
+    position: relative;
+    background-color: #666;
+    top:7px;
+    left:42px;
+    padding: 10px;
+    list-style: none;
+    width: 70%;
+    border: #2e9afe solid 3px;
+    color: azure;
+    text-align: center;
+    border:black solid 3px;
+}
+.list .active{
+    color:blue;
+    text-decoration: none;
+    color: #53e35a;
+    background-color: #333;
+    text-decoration: none;
+    border: #53e35a solid 3px;
+
+}
+    
+.list li:hover{
+    color:palegreen;
+    list-style: none;
+}
+
+#controls{
+    width: auto;
+    margin-right: 5px;
+    position: relative;
+
+}
+button{
+    width: 18%;
+    position: relative;
+}
+#center{
+    margin-left: 3%;
+    padding: 1%;
+    position: relative;
+}
+#box{
+    position: sticky;
+    width: 69%;
+    padding-left: 30%;
+    min-width: 40%;
+    padding-top: 2%;
+
+}
+#dial{
+     background-color: rgb(43, 226, 226);
+     width: 375;
+     min-width: 10%;
+     border: black solid 5px;
+
+}
+body{
+    
+    background-color: blue; 
+    padding: 1%;
+    
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: static;
+    top: 2px;
+
+}
+.list2{
+    float:grid-auto-flow;
+    }
+.list2 a{
+    display: block;
+    color: white;
+    float: left;
+    padding: 10px;
+    border: groove 2px;
+    border-color: aqua;
+    text-align: center;
+    text-decoration: none;
+}
+
+.list2 a:hover {
+    background-color: palegreen;
+    border-color: black;
+    color: black;
+}
