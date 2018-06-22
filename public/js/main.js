@@ -7,6 +7,7 @@ var searchBar = document.getElementById("movieSearcher");
 $("#movieSearcher").on("click", function()
 {   
     searchBar.value = " ";
+    $('body').css('background-image','url(images/wallpaper2.jpg)')
 
 });
 
@@ -37,7 +38,7 @@ $("#movieSearcher").on("click", function()
                     $("#poster").attr("src",d.Poster).css('display','block').css('margin-left','auto').css('margin-right','auto').css('text-align','justify').css('min-width','5%');
                     $("#para").html(d.Plot).css('text-align' ,'justify');
                     $("#results").show().css('background-color','teal').css('color','white');
-
+                    $("body").css('background-image',"url("+d.Poster+")")
                 }
             }
             );
