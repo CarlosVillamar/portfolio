@@ -29,10 +29,10 @@
 </head>
 
 
-<body style="background-image: url(images/wallpaper.png)">
+<body style="background-color: #404552">
     <h1>Welcome to Carlos' Portfolio</h1>
-    <div style="padding: 20px">
-        <p class="text">
+    <div style="padding: 10px;">
+        <p class="text" id="bodyContainer">
             <img src="images/download_20160229_004236.jpeg" style="padding: 12px; float:left; width:30%; height: 50%;  ">In transitioning into the tech world, I am in an interesting position because I returned to school not only to
             continue my undergrad education but to make a career change. Most of my adult life I have spent working in retail
             management as an operations manager. I have experience working in different teams of various sizes, with different
@@ -49,7 +49,7 @@
             who will work hard in anything I am passionate about and I hope the projects below and along the navigation bar reflect that.
         </p>
 
-        <div style="padding: 20px">
+        <div id="bodyContainer"">
             <!-- The grid: four columns -->
             <div class="row">
                 <div class="column">
@@ -68,13 +68,14 @@
             </div>
 
 
-            <p class="text">To-Do list project: This was a class project meant to combine different component concepts and put it all together.
-                This application's intended utility was to create a all-in-one task list between two tabs, adding,deleting,editing
+            <p class="text"><span class="appTitle">To-Do list project:</span> This was a class project meant to combine different component concepts and put it all together.
+            This application's intended utility was to create a all-in-one task list between two tabs, adding,deleting,editing
                 and reordering tasks as the user sees fit. Here the android's recycler view module in a addtion to firebase
                 database intergation create a responsive and efficent experience.
             </p>
         </div>
-        <div style="padding: 20px">
+        
+        <div id="bodyContainer">
             <div class="row">
                 <div class="column">
                     <img src="images/loafgo.png" alt="IMG.1" onclick="openImg(this);" class="pic">
@@ -93,7 +94,7 @@
                 </div>
 
             </div>
-            <p class="text">Delivery Application Concept: This application was bulit to demostrate how a ponetial Delivery application would
+            <p class="text"><span class="appTitle"> Delivery Application Concept:</span> This application was bulit to demostrate how a ponetial Delivery application would
                 work. Using the zxing API libray to process barcodes and/or QR codes as data objects and what you can ponetially
                 do with it. The cool part was attaching the barcode itself to some dummy data and creating individual google
                 map queries for each object. Using the google maps API, I was able to explicitly pull up driving directions
@@ -113,7 +114,8 @@
             <!-- </div> -->
 
         </div>
-        <div style="padding: 20px">
+
+        <div id="bodyContainer">
             <div class="row">
                 <div class="column">
                     <img src="images/WS_1.png" alt="IMG.1" onclick="openImg(this);" class="pic">
@@ -123,7 +125,7 @@
                 </div>
 
             </div>
-            <p class="text">Word Stack Game: A game that generates two words and scrambles them together into a letter stack. It is UP TO
+            <p class="text"><span class="appTitle">Word Stack game:</span> A game that generates two words and scrambles them together into a letter stack. It is UP TO
                 YOU to figure out what the two words are. This game demostrates the use of a variety of listeners to allow
                 you to drag and drop the letter tiles to meet the win conditions. The letter titles themselves use the stack
                 data structure for organization and distrubution.

@@ -3,7 +3,7 @@ h1{
   font-size: 40pt;
   font-family: monospace;
   text-align: center;
-  color: aqua;
+  color:#5294e2;
 }
 .pic{
   width: 100%;
@@ -22,17 +22,25 @@ h1{
 }
 .text{
   text-align: justify;
-  font-size: 15pt;
-  color: aquamarine;
-  letter-spacing: 2px;
-  background-color: rgba(3, 3, 83, 0.479);
+  font-size: 18pt;
+  font-weight: 500;
+  color: #1b3457;
+  letter-spacing: 3px;
+  line-height: 40px;
     
 }
 
 body{
   width: 1080px;
-  padding: .5%;
+  padding: .2%;
   margin: auto;
+}
+#bodyContainer{
+  padding: .5%;
+  padding-bottom: 5px; 
+  margin-bottom: 5%;
+  background-color: #ccdbf0;
+
 }
 .gallery{
   margin:5px;
@@ -43,7 +51,16 @@ body{
 .gallery:hover{
   border: 5px solid #404040;
 
-  
+}
+.formContainer{
+  padding-left: 20px;
+  margin: 10%;
+  background-color: #404040
+}
+.postContainer{
+  padding: 10px; 
+  background-color: rgba(3, 3, 53, 0.87);
+   height: auto;
 }
 .desc{
   padding: 10px;
@@ -63,10 +80,9 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    position: static;
-    top: 2px;
-
+    background-color: #383c4a;
+    position: sticky;
+    top: .2%;
 }
 .list{
     float:grid-auto-flow;
@@ -77,15 +93,15 @@ ul {
     float: left;
     padding: 10px;
     border: groove 2px;
-    border-color: aqua;
+    border-color: #5294e2;
     text-align: center;
     text-decoration: none;
 }
 
 .list a:hover {
-    background-color: palegreen;
+    background-color: #5294e2;
     border-color: black;
-    color: black;
+    color: whitesmoke;
 }
 
 /* The grid: Four equal columns that floats next to each other */
@@ -94,7 +110,7 @@ ul {
   width: 30%;
   height: 70%;
   padding: 5px;
-  border: aqua solid 3px;
+  border: blue solid 3px;
 }
 
 /* Style the images inside the grid */
@@ -118,14 +134,26 @@ table {
   border-collapse: collapse;
   margin: 0 auto;
   max-width: 600px;
-  width: 100%; }
+  width: 100%;
+}
+
+.row{
+background-color: cornflowerblue;
+}
+
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+  background-color: darkslateblue;
 }
-
+.appTitle{
+  color: #0d73f0;
+  font-weight: bold;
+  
+}
 
 /* The expanding image container (positioning is needed to position the close button and the text) */
 .container {

@@ -59,7 +59,9 @@ button{
 body{
     
     background-color: blue; 
-    padding: 1%;
+    padding: .2%;
+    width: 1080px;
+    margin: auto;
     
 }
 ul {
