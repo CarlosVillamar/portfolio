@@ -21,8 +21,8 @@ $(document).ready(function () {
         e.preventDefault();
         
         //below we bulid artist URL based on the users desired interest
-        qu = ('http://api.napster.com/v2.2/search?apikey=YjM2NjkyY2MtZmE0Zi00NjEyLWE4ZDUtZDE5MWEzOTM3NmEz&query=' + q + '&type=artist')
-        // console.log(q)
+        qu = ('http://api.napster.com/v2.2/search?apikey=YjM2NjkyY2MtZmE0Zi00NjEyLWE4ZDUtZDE5MWEzOTM3NmEz&query='+ q +'&type=artist')
+        console.log(qu)
        
         $.ajax({
             //first call to retrieve data based on the url we built, we will search for the artist the user wants
