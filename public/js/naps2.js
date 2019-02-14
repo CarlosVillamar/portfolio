@@ -3,6 +3,10 @@ this.top5 = " ";
 this.blurb = " ";
 this.image = " ";
 
+var jukebox = { player: document.getElementById('audio') };
+
+let i = 0;
+
 $(document).ready(function () {
     //napster metadata APIs
     //event handler that will clear the search bar, search results and wipes out the trakcs loaded onto the array
@@ -12,9 +16,6 @@ $(document).ready(function () {
     });
 });
 
-var jukebox = { player: document.getElementById('audio') };
-
-let i = 0;
 
 $('#form').submit(function (e) {
     $('.list').remove()
@@ -24,14 +25,15 @@ $('#form').submit(function (e) {
     $('#a').remove()
 
     //before the first ajax call will retrieve the value from the serach bar and bulid the url using that value
-    q = $('#search').val();
+    let q = $('#search').val();
+    q = q.toLowerCase();//force lowercase 
+   
 
     //saves the value  of the search bar on submit in this varable(who is the user searching for)
     e.preventDefault();
 
     //below we bulid artist URL based on the users desired interest
     newQ = ("http://api.napster.com/v2.2/artists/" + q + "?apikey=YjM2NjkyY2MtZmE0Zi00NjEyLWE4ZDUtZDE5MWEzOTM3NmEz")
-    console.log(newQ);
 
     $.ajax({
         //first call to retrieve data based on the url we built, we will search for the artist the user wants
@@ -56,9 +58,9 @@ $('#form').submit(function (e) {
 
         $('#blurb').append("<p id='des'>" + "Artist info: " + blurb + "</p>").css('color', 'white').css('border', 'solid').css('border-color', 'white').css('background-color', '#666').css('text-align', 'justify').css('padding', '5px')
 
-        $.get(image, (r) => {
+        $.get(image, (e) => {
             //here we retrieve the disired image which was the biggest one in the JSON call and set it to the background of the jukebox container
-            let set = r.images[3].url
+            let set = e.images[3].url
             $('#box').css('background-image', 'url(' + set + ')').css('border', 'solid').css('border-color', 'aqua').css('border-width', '5px')
 
         })
@@ -76,8 +78,8 @@ $('#form').submit(function (e) {
         });
     }
 
-    this.play = $('#play').click((r) => {
-        r.preventDefault();
+    this.play = $('#play').click((e) => {
+        e.preventDefault();
         jukebox.player.play();
         $("#play").css('border-color', 'black').css('border-width', '3px');
         $('#pause').css('border-width', '0px');
@@ -108,7 +110,8 @@ $('#form').submit(function (e) {
 
         if (i == songArr.length - 1) {
             i = 0
-            jukebox.player.pause();
+            jukebox.player.src = songArr[i];
+            jukebox.player.play();
         } else {
             i++;
             jukebox.player.src = songArr[i];
