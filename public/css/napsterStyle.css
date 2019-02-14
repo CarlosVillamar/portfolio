@@ -44,9 +44,10 @@ button{
 #box{
     position: sticky;
     width: 69%;
+    height: 80%;
     padding-left: 30%;
     min-width: 40%;
-    padding-top: 2%;
+    padding-top: 5%;
 
 }
 #dial{
