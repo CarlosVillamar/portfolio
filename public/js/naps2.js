@@ -1,7 +1,9 @@
+import * as PIXI from 'pixi.js';
 this.songArr = [];
 this.top5 = " ";
 this.blurb = " ";
 this.image = " ";
+var container = new PIXI.Container();
 
 var jukebox = { player: document.getElementById('audio') };
 

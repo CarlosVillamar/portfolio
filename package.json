@@ -15,9 +15,18 @@
     "heroku": "^7.21.0",
     "nodemon": "^1.18.10",
     "pg": "^7.4.3",
+    "pixi.js": "^4.8.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "sequelize": "^4.37.10"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosVillamar/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CarlosVillamar/portfolio/issues"
+  },
+  "homepage": "https://github.com/CarlosVillamar/portfolio#readme"
 }
