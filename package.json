@@ -15,6 +15,7 @@
     "heroku": "^7.21.0",
     "nodemon": "^1.18.10",
     "pg": "^7.4.3",
+    "pixi.js": "^4.8.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "sequelize": "^4.37.10"
@@ -27,8 +28,12 @@
   "bugs": {
     "url": "https://github.com/CarlosVillamar/portfolio/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/CarlosVillamar/portfolio#readme",
   "keywords": [
     "portfolio"
   ]
+=======
+  "homepage": "https://github.com/CarlosVillamar/portfolio#readme"
+>>>>>>> f7635eae385f69ffd104b2ba781ac03dd4b4cf00
 }
