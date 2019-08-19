@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Carlos Villamar",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -19,5 +19,16 @@
     "react-dom": "^16.4.1",
     "sequelize": "^4.37.10"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosVillamar/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CarlosVillamar/portfolio/issues"
+  },
+  "homepage": "https://github.com/CarlosVillamar/portfolio#readme",
+  "keywords": [
+    "portfolio"
+  ]
 }
