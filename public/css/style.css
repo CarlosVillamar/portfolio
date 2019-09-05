@@ -84,21 +84,21 @@ ul {
     position: sticky;
     top: .2%;
 }
-.list{
-    float:grid-auto-flow;
+.navBar{
+    float: fixed;
     }
-.list a{
+.navBar a{
     display: block;
     color: white;
     float: left;
-    padding: 10px;
+    padding: 8px;
     border: groove 2px;
     border-color: #5294e2;
     text-align: center;
     text-decoration: none;
 }
 
-.list a:hover {
+.navBar a:hover {
     background-color: #5294e2;
     border-color: black;
     color: whitesmoke;

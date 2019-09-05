@@ -44,9 +44,9 @@ button{
 #box{
     position: sticky;
     width: 69%;
-    height: 80%;
+    height: 60%;
     padding-left: 30%;
-    min-width: 40%;
+    min-width: 30%;
     padding-top: 5%;
 
 }
@@ -74,23 +74,4 @@ ul {
     position: static;
     top: 2px;
 
-}
-.list2{
-    float:grid-auto-flow;
-    }
-.list2 a{
-    display: block;
-    color: white;
-    float: left;
-    padding: 10px;
-    border: groove 2px;
-    border-color: aqua;
-    text-align: center;
-    text-decoration: none;
-}
-
-.list2 a:hover {
-    background-color: palegreen;
-    border-color: black;
-    color: black;
 }

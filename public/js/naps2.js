@@ -145,6 +145,7 @@ $(document).ready(function () {
 
         //TODO: figure out how to select and play the tracks from a playlist on screen
         $('.list').click(function () {
+            //actually li.list
 
             jukebox.player.pause();
             // let arrSongs = $('.list')
