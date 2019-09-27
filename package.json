@@ -4,21 +4,22 @@
   "description": "Personal Portfolio",
   "main": "index.js",
   "scripts": {
-   
-      "start": "node index.js",
-  
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Villamar",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "heroku": "^7.21.0",
+    "jquery": "^3.4.1",
     "nodemon": "^1.18.10",
     "pg": "^7.4.3",
     "pixi.js": "^4.8.6",
+    "popper.js": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "sequelize": "^4.44.3"

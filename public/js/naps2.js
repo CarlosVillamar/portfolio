@@ -11,7 +11,7 @@ $(document).ready(function () {
     //napster metadata APIs
     //event handler that will clear the search bar, search results and wipes out the trakcs loaded onto the array
     $("#search").on("click", function () {
-        document.getElementById('search').value = " "
+        document.getElementById('search').value = ""
 
     });
 
@@ -26,8 +26,8 @@ $(document).ready(function () {
 
         //before the first ajax call will retrieve the value from the serach bar and bulid the url using that value
         let q = $('#search').val();
-        q = q.toLowerCase();//force lowercase 
-
+        q = q.replace(/ /g, "-").toLowerCase();
+        
 
         //saves the value  of the search bar on submit in this varable(who is the user searching for)
         e.preventDefault();
@@ -78,6 +78,10 @@ $(document).ready(function () {
                 jukebox.player.src = this.songArr[0];
                 jukebox.player.autoplay = true;
             });
+        }
+
+        function searchParse(str){
+
         }
 
 

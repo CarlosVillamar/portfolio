@@ -50,6 +50,7 @@ server.get('/blog', (req, res) => {
     })
 })
 
+
 server.post('/add', (req, res) => {
   let data = req.body;
   const client = new Client({
