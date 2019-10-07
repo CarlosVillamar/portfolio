@@ -2,60 +2,14 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <% include navBar.ejs %>
-    </ul>
+    <% include partials/navBar.ejs %>
 </head>
 
 <body style="background-color: #5294e2">
 
     <div class="formContainer">
-        <form id="form" style=" left: 40%;
-            top: 12%; 
-            position: absolute; padding: 1%" class="text" action="/add" method="POST">
-            <h4>Join us share a topic</h4>
-            subject:
-            <br>
-            <input type="text" name="title" id="thoughts" placeholder="What's on your mind?" style="width: 200px">
-            <br> message:
-            <br>
-            <textarea type="text" name="subject" id="subject" placeholder="wrtie something" style="height : 150; width: 200; text-orientation: upright">
-            </textarea>
-            <br>
-            <button type="submit" id="button" style="display: block">Submit</button>
-        </form>
+        <% include blog/postForm.ejs %>
     </div>
-<div style="padding-top:400px; margin-top: 100px">
-
-    <div class="postContainer">
-        <h1>POSTS</h1>
-        <table>
-                
-                <tbody>
-                    <tr>
-                        <% for (let i in result.rows) { %>
-                            <!-- <td id='id'>
-                                <%= result.rows[i].id %> -->
-                                
-                                <td name='title' value='' style=>
-                                    <span style="padding-bottom: 5px; border-bottom:solid aqua 2px; background-origin: padding-box;">
-                                            <b>
-                                                <%= result.rows[i].title %>
-                                            </b>
-                                        </span>
-                                        <br><br>
-                                        
-                                        <%= result.rows[i].body %>
-                                    </td>
-                                    <!-- <tr name='body' value='' style="text-align: justify">
-                                        <%= result.rows[i].body %>
-                                    </tr> -->
-                                </tr>
-                                
-                                <% } %>
-                            </tbody>
-                            
-                        </table>
-                        
-                    </div>
-                </div>
+    
+    <% include blog/posts.ejs %>
 </body>

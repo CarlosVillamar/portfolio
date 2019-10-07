@@ -3,166 +3,19 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <% include navBar.ejs %>
+    <% include partials/navBar.ejs %>
+    <h1>Welcome to Carlos' Portfolio</h1>
 
 </head>
 
-
 <body style="background-color: #404552">
-    <h1>Welcome to Carlos' Portfolio</h1>
     <div style="padding: 10px;">
-        <p class="text" id="bodyContainer">
-            <img src="images/headshot_aug_19.jpeg" style="padding: 12px; float:left; width:30%; height: 50%;  ">In transitioning into the tech world, I am in an interesting position because I returned to school not only to
-            continue my undergrad education but to make a career change. Most of my adult life I have spent working in retail
-            management as an operations manager. I have experience working in different teams of various sizes, with different
-            personalities, all with their varying strengths and opportunities. As a leader, it was important to set standards,
-            led by example, give feedback, take feedback to develop talent and hold others accountable. When I decided
-            to return to school I wanted to do something challenging, I felt that in my previous career I was not satisfied
-            with the personal satisfaction in my work. I originally came to Lehman as a computer information system major,
-            but I quickly realized that programming was something I kept coming back to and my programming courses instilled
-            things in me that nothing else did. Programming give me a curiosity, an excitement to learn and forced me to
-            learn outside of the class room and for once I enjoyed doing it. I gravitated towards computer science because
-            it allowed me to study something that was foreign to me and presented me with the challenge of learning every
-            day and more further I go down the rabbit hole, with each successful milestone, it gives me the satisfaction very
-            few things do. I am eager to learn and bring my own experiences to an entry-level position in tech. I am someone
-            who will work hard in anything I am passionate about and I hope the projects below and along the navigation bar reflect that.
-        </p>
+        <% include partials/about.ejs %>
 
-        <div id="bodyContainer">
-            <!-- The grid: four columns -->
-            <div class="row">
-                <div class="column">
-                    <img src="images/tab1.png" alt="IMG.1" class="pic">
-
-                    <!-- The expanding image container -->
-                </div>
-
-                <div class="column">
-                    <img src="images/tab_add.png" alt="IMG.2" onclick="openImg(this); " class="pic">
-                </div>
-                <div class="column">
-                    <img src="images/tab_edit2.png" alt="IMG.3" onclick="openImg(this);" class="pic">
-                </div>
-
-            </div>
-
-
-            <p class="text"><span class="appTitle">To-Do list project:</span> This was a class project meant to combine different component concepts and put it all together.
-            This application's intended utility was to create a all-in-one task list between two tabs, adding,deleting,editing
-                and reordering tasks as the user sees fit. Here the android's recycler view module in a addtion to firebase
-                database intergation create a responsive and efficent experience.
-            </p>
-        </div>
+        <% include androidExamples/tabProject.ejs %>
         
-        <div id="bodyContainer">
-            <div class="row">
-                <div class="column">
-                    <img src="images/loafgo.png" alt="IMG.1" onclick="openImg(this);" class="pic">
-                </div>
-                <div class="column">
-                    <img src="images/loafg0_2.png" alt="IMG.2" onclick="openImg(this); " class="pic">
-                </div>
-                <div class="column">
-                    <img src="images/loaf_go3.png" alt="IMG.3" onclick="openImg(this);" class="pic">
-                </div>
-                <div class="column">
-                    <img src="images/loaf_go4.png" alt="IMG.4" onclick="openImg(this);" class="pic">
-                </div>
-                <div class="column">
-                    <img src="images/loafgo_5.png" alt="IMG.5" onclick="openImg(this);" class="pic">
-                </div>
-
-            </div>
-            <p class="text"><span class="appTitle"> Delivery Application Concept:</span> This application was bulit to demostrate how a ponetial Delivery application would
-                work. Using the zxing API libray to process barcodes and/or QR codes as data objects and what you can ponetially
-                do with it. The cool part was attaching the barcode itself to some dummy data and creating individual google
-                map queries for each object. Using the google maps API, I was able to explicitly pull up driving directions
-                for each query.This project was a prototype and something I would like to come back to in the near future.
-
-            </p>
-            <!-- The expanding image container
-        <div class="container">
-            <!-- Close the image -->
-            <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
-
-            <!-- Expanded image -->
-            <!-- <img id="expandedImg" style="width:100%"> -->
-
-            <!-- Image text -->
-            <!-- <div id="imgtext"></div> -->
-            <!-- </div> -->
-
-        </div>
-
-        <div id="bodyContainer">
-            <div class="row">
-                <div class="column">
-                    <img src="images/WS_1.png" alt="IMG.1" onclick="openImg(this);" class="pic">
-                </div>
-                <div class="column">
-                    <img src="images/WS_2.png" alt="IMG.2" onclick="openImg(this); " class="pic">
-                </div>
-
-            </div>
-            <p class="text"><span class="appTitle">Word Stack game:</span> A game that generates two words and scrambles them together into a letter stack. It is UP TO
-                YOU to figure out what the two words are. This game demostrates the use of a variety of listeners to allow
-                you to drag and drop the letter tiles to meet the win conditions. The letter titles themselves use the stack
-                data structure for organization and distrubution.
-            </p>
-        </div>
-
-
-
-
+        <% include androidExamples/loafGoProject.ejs %>
+     
+        <% include androidExamples/wordStackProject.ejs %>
     </div>
-
-
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-    </div>
-
-
-
-
-
-    <script>
-        function openImg(imgs) {
-            // Get the expanded image
-            var expandImg = document.getElementById("expandedImg");
-            // Get the image text
-            var imgText = document.getElementById("imgtext");
-            // Use the same src in the expanded image as the image being clicked on from the grid
-            expandImg.src = imgs.src;
-            // Use the value of the alt attribute of the clickable image as text inside the expanded image
-            imgText.innerHTML = imgs.alt;
-            // Show the container element (hidden with CSS)
-            expandImg.parentElement.style.display = "block";
-        }
-
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementsByClassName('pic');
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-    </script>
-
-
 </body>

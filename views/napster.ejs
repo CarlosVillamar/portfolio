@@ -3,14 +3,7 @@
 <head>
 
     <title>Carlos' Napster Jukebox</title>
-
-    <link rel="stylesheet" href="css/napsterStyle.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <% include navBar.ejs %>
+    <% include partials/navBar.ejs %>
 </head>
 
 <body style="background-color: lightslategrey">
@@ -20,7 +13,10 @@
                 <form id="form">
                     <ul style="float:fixed">
 
-                        <input id="search" name="search" placeholder="search your favorite artists' top five!!" style="width: 250; text-align: center">
+                        <input id="search" name="search" 
+                        placeholder="search your favorite artists' top five!!" 
+                        style="width: 250; text-align: center">
+                        
                         <button type="submit" style="width: 30%">search</button>
                     </ul>
                 </form>
@@ -60,4 +56,4 @@
 
 
 </body>
-<script src="js/naps2.js"></script>
+<% include partials/napsterScript.ejs %>

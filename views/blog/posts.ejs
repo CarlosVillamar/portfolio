@@ -1,0 +1,32 @@
+<div style="padding-top:400px; margin-top: 100px">
+    <div class="postContainer">
+        <h1>POSTS</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <% for (let i in result.rows) { %>
+                    <!-- <td id='id'>
+                            <%= result.rows[i].id %> -->
+
+                    <td name='title' value='' style=>
+                        <span
+                            style="padding-bottom: 5px; border-bottom:solid aqua 2px; background-origin: padding-box;">
+                            <b>
+                                <%= result.rows[i].title %>
+                            </b>
+                        </span>
+                        <br><br>
+
+                        <%= result.rows[i].body %>
+                    </td>
+                    <!-- <tr name='body' value='' style="text-align: justify">
+                                    <%= result.rows[i].body %>
+                                </tr> -->
+                </tr>
+
+                <% } %>
+            </tbody>
+
+        </table>
+    </div>
+</div>
