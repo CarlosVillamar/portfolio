@@ -22,7 +22,7 @@
     "popper.js": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.13.1",
-    "sequelize": "^4.44.3"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {},
   "repository": {
